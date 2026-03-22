@@ -21,7 +21,14 @@
         body {
             display: grid;
             grid-template-columns: 200px 1fr;
-            grid-template-rows: 1fr 120px;
+            grid-template-rows: 300px 1fr 150px;
+            grid-template-areas: 
+            "header header"
+            "section main"
+            "footer footer";
+            min-height: 100svh;
+            gap: 0.5rem;
+            padding: .5rem;
         }
 
         header {
@@ -30,10 +37,14 @@
         
         section {
             grid-area: section;
+            width: 100%;
+            height: 100%;
         }
 
         main {
              grid-area: main;
+             position: relative;
+             isolation: isolate;
         }
 
         footer {
@@ -44,11 +55,11 @@
 
 <body>
     <header>
-
+        header
     </header>
 
     <section>
-
+        section
     </section>
 
     <main>
@@ -61,7 +72,7 @@
         </div>
     </main>
     <footer>
-
+        footer
     </footer>
 </body>
 
